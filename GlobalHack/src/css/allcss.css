@@ -3578,6 +3578,9 @@ input:focus {
 	line-height: 45px;
 	padding-top: 23px;
 }
+.navbar-brand img {
+    max-height: 44px;
+}
 .current a {
 	color: #e96656 !important;
 	position: relative;

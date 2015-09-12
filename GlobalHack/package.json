@@ -1,7 +1,7 @@
 {
-  "name": "startbs-maintz",
+  "name": "Bureaucracy_Busters",
   "version": "1.0.0",
-  "description": "Maintz.com Angular Website",
+  "description": "Global Hack5 Angular Website",
   "main": "index.html",
   "license": "MIT",
   "author": "wmmaintz <bill@allbusinesscomputerservices.com>",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "startbs-maintz"
+    "url": "Bureaucracy_Busters"
   },
   "devDependencies": {
     "browser-sync": "^2.7.7",

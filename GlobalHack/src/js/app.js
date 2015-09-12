@@ -61,28 +61,28 @@ if(debug){
     console.log("angular.module('app.services', ['ngResource']) defined");
 }
 
-app.run(
-    [            '$rootScope', '$state', '$stateParams',
-        function ($rootScope,   $state,   $stateParams) {
-            /* It's very handy to add references to $state and $stateParams to the $rootScope
-            ** so that you can access them from any scope within your applications.
-            ** For example, <li ng-class="{ active: $state.includes('contacts.list') }"> will
-            ** set the <li> to active whenever 'contacts.list' or one of its decendents is active.
-            */
-            
-            $rootScope.state = $state;
-            $rootScope.stateParams = $stateParams;
-
-            $rootScope.pageLoaded = true;
-            
-            //$rootScope.endPoint = "http://localhost:3000";
-            $rootScope.endPoint = "http://192.168.137.196:3000";
-
-            $rootScope.clearmenuclass = true;
-
-        }
-    ]
-);
+//app.run(
+//    [            '$rootScope', '$state', '$stateParams',
+//        function ($rootScope,   $state,   $stateParams) {
+//            /* It's very handy to add references to $state and $stateParams to the $rootScope
+//            ** so that you can access them from any scope within your applications.
+//            ** For example, <li ng-class="{ active: $state.includes('contacts.list') }"> will
+//            ** set the <li> to active whenever 'contacts.list' or one of its decendents is active.
+//            */
+//            
+//            $rootScope.state = $state;
+//            $rootScope.stateParams = $stateParams;
+//
+//            $rootScope.pageLoaded = true;
+//            
+//            //$rootScope.endPoint = "http://localhost:3000";
+//            $rootScope.endPoint = "http://localhost:3000";
+//
+//            $rootScope.clearmenuclass = true;
+//
+//        }
+//    ]
+//);
 
 app.config( ['$urlRouterProvider', '$stateProvider',
     function ($urlRouterProvider,   $stateProvider) {
@@ -112,6 +112,30 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         controller: 'aboutController',
         templateUrl: 'templates/about/about.html',
         url: '/about'
+    })
+
+    .state('citations', {
+        //controller: 'citationsController',
+        templateUrl: 'templates/citations/citations.html',
+        url: '/citations'
+    })
+
+    .state('test1', {
+        //controller: 'test1Controller',
+        templateUrl: 'templates/test/test1.html',
+        url: '/test1'
+    })
+
+    .state('test2', {
+        //controller: 'test2Controller',
+        templateUrl: 'templates/test/test2.html',
+        url: '/test2'
+    })
+
+    .state('test3', {
+        //controller: 'test3Controller',
+        templateUrl: 'templates/test/test3.html',
+        url: '/test3'
     })
 
 
