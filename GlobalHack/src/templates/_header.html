@@ -14,188 +14,70 @@
         background-color: lime;
     }
 </style>
-<header>
-    <nav class="nav nav-pills navbar-default navbar-fixed-top" 
-             ng-class="{clear_menu: clearmenuclass, gray_menu: !(clearmenuclass)}">
-
-        <div class="container-fluid">
-
-            <div class="navbar-header">
-                <button type="button hidden" 
-                        class="navbar-toggle collapsed" 
-                        data-toggle="collapse" 
-                        data-target="#navbar-collapse-1" 
-                        aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+<header id="home" class="header">
+    
+    <!-- TOP BAR -->
+    <div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header responsive-logo">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand menu-item" 
-                   ui-sref="home"
-                   ui-sref-active="active">
-                    <span class="glyphicon glyphicon-home"></span>
-                    <span class="menu-text">&nbsp;Maintz.com</span>
-                </a>
-            </div>    
-
-            <div class="navbar-collapse collapse" id="navbar-collapse-1">
-                <!-- TODO: implement this search form by removing the hidden class and creating supporting logic -->
-                <form class="navbar-left navbar-form hidden" role="search">
-                    <div class="input-group form-group">
-                        <input type="text" class="form-control" placeholder="Search this website" name="q">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
-                                <span class="menu-text">&nbsp;Search</span>
-                            </button>
-                        </div>
-                    </div>
-                </form> <!-- Website Search function -->
-
-                <ul class="nav navbar-nav nav-pills navbar-right">
-                    <li role="presentation" class="hidden"><a ui-sref="home"></a></li>
-
-                    <!-- About Menu -->
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle menu-item"
-                           role="button"
-                           data-toggle="dropdown"
-                           ng-class="{active: $state.includes('about')}"
-                           aria-expanded="true"
-                           aria-haspopup="true"
-                           >
-                            <span class="glyphicon glyphicon-info-sign"></span>
-                            <span class="menu-text">&nbsp;About</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li ui-sref-active="active">
-                                <a class="submenu-item"
-                                   ui-sref="about">
-                                    <span class="glyphicon glyphicon-info-sign"></span>
-                                    <span class="menu-text">&nbsp;About Maintz.com</span>
-                                </a>
-                            </li>
-                            <li ui-sref-active="active">
-                                <a class="submenu-item"
-                                   ui-sref="website">
-                                    <span class="glyphicon glyphicon-folder-open"></span>
-                                    <span class="menu-text">&nbsp;About Website</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li> <!-- End of About Pages Menu -->
-
-                    <!-- Photos Menu -->
-                    <li role="presentation" class="dropdown" ng-class="{active: $state.includes('photos')}">
-                        <a role="button" class="dropdown-toggle menu-item" 
-                           data-toggle="dropdown" 
-                           aria-expanded="false" 
-                           aria-haspopup="true"
-                           >
-                            <span class="glyphicon glyphicon-camera"></span>
-                            <span class="menu-text">&nbsp;Photos</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a class="submenu-item" ng-class="{active: $state.includes('photoCarousel')}"
-                                    ui-sref="photoCarousel">
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                    <span class="menu-text">&nbsp;Photo Carousel</span>
-                                </a>
-                            </li><!-- Photo Carousel -->
-                            <li>
-                                <a class="submenu-item" ng-class="{active: $state.includes('photoGallery')}"
-                                    ui-sref="photoGallery">
-                                    <span class="glyphicon glyphicon-camera"></span>
-                                    <span class="menu-text">&nbsp;Photo Gallery</span>
-                                </a>
-                            </li><!-- Photo Gallery -->
-                            <li>
-                                <a class="submenu-item" ng-class="{active: $state.includes('photoGrid')}"
-                                   ui-sref="photoGrid">
-                                    <span class="glyphicon glyphicon-th-list"></span>
-                                    <span class="menu-text">&nbsp;Photo Grid</span>
-                                </a>
-                            </li><!-- Photo Grid -->
-                        </ul>
-                    </li> <!-- End of Photo Pages -->
-
-                    <li role="presentation" ng-class="{active: $state.includes('videos')}">
-                        <a class="menu-item"
-                           ui-sref="videos">
-                            <span class="glyphicon glyphicon-facetime-video"></span>
-                            <span class="menu-text">&nbsp;Videos</span>
-                        </a>
-                    </li> <!-- Videos -->
-
-                    <li role="presentation">
-                        <a class="menu-item" ng-class="{active: $state.includes('links')}"
-                           ui-sref="links">
-                            <span class="glyphicon glyphicon-link"></span>
-                            <span class="menu-text">&nbsp;Links</span>
-                        </a>
-                    </li> <!-- Links -->
-
-                    <!-- TODO: implement this contact form by removing the hidden class and creating supporting logic -->
-                    <li role="presentation" class="hidden">
-                        <a class="menu-item" ng-class="{active: $state.includes('contacts')}"
-                           ui-sref="contact" >
-                            <span class="glyphicon glyphicon-envelope"></span>
-                            <span class="menu-text">&nbsp;Contact</span>
-                        </a>
-                    </li> <!-- Contacts -->
-
-                    <!-- TODO: implement login function by removing the hidden class and creating supporting logic -->
-                    <li role="presentation" class="dropdown hidden" >
-                        <a class="dropdown-toggle menu-item" ng-class="{active: $state.includes('login')}" 
-                            data-toggle="dropdown">
-
-                            <span ng-show={{loggedIn}}>
-                                <span class="glyphicon glyphicon-log-out"></span>
-                                <span class="menu-text">&nbsp;Logout</span>
-                            </span>
-
-                            <span ng-hide={{loggedIn}}>
-                                <span class="glyphicon glyphicon-log-in"></span>
-                                <span class="menu-text">&nbsp;Login</span>
-                            </span>
-
-                            <span class="caret"></span>&nbsp;
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="submenu-item" ui-sref="login" >
-                                    <span class="glyphicon glyphicon-log-in"></span>
-                                    <span class="menu-text">&nbsp;Login</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="submenu-item" ui-sref="register">
-                                    <span class="glyphicon glyphicon-user"></span>
-                                    <span class="menu-text">&nbsp;Sign Up</span>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="submenu-item" ui-sref="logout" ng-class="disabled">
-                                    <span class="glyphicon glyphicon-log-out"></span>
-                                    <span class="menu-text">&nbsp;Logout</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </li> <!-- Login/Logoff options -->
-
-                    <li ui-view="hint" class="navbar-text pull-right"></li>
-
-                </ul> <!-- Right-side menu items -->
-
+                <div class="navbar-brand">
+                <img src="images/logo.png" alt="Zerif">
+                </div>
             </div>
-
+            <nav class="navbar-collapse collapse" role="navigation" id="bs-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#pricingtable">Pricing</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
         </div>
-
-    </nav>
-</header>
+    </div>
+    <!-- / END TOP BAR -->
+    
+    <!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+    <div class="container">
+        
+        <!-- HEADING -->
+        <h1 class="intro">Affordable Quality services for Small Businesses</h1>
+        
+        <!-- CALL TO ACTION BUTTONS -->
+        <div class="buttons inpage-scroll">
+            <a href="#works" class="btn btn-primary custom-button red-btn">Our Works</a>
+            <a href="#pricingtable" class="btn btn-primary custom-button green-btn">Our Packages</a>
+        </div>
+        
+        <!-- 3 SHORT MESSAGE ABOUT COMPANY -->
+        <div class="row bottom-message-section">
+            <div class="col-lg-4 col-sm-4">
+                <div class="short-text">
+                    <i class="icon icon-fontawesome-webfont-358"></i> Fixed price for packages
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="short-text">
+                    <i class="icon-fontawesome-webfont-286"></i> Quality product in time
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="short-text">
+                    <i class="icon-fontawesome-webfont-347"></i> Satisfaction guranteed
+                </div>
+            </div>
+        </div>
+    </div> <!-- / END BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES  -->
+    
+</header> <!-- / END HOME SECTION  -->
