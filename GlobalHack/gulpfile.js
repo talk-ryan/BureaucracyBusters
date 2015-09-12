@@ -217,24 +217,6 @@
                 'bower_components/jquery/dist/jquery.min.map'
             ],
             vendor_js: [
-                /*
-                "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js",
-                "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js",
-                "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js",
-                "//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js",
-                "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.js",
-                "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js",
-                "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js",
-                "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js",
-                "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js",
-                "http://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js",
-                "http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.js",
-                "http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap-tpls.js",
-                "http://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.3/sortable.js",
-                "http://cdnjs.cloudflare.com/ajax/libs/angular-carousel/0.3.10/angular-carousel.js",
-                'bower_components/html5shiv/dist/html5shiv.js', // Called out separately in index.html
-                'bower_components/respond/src/respond.js',      // Called out separately in index.html
-                */
                 'bower_components/modernizr/modernizr.js',
                 'bower_components/jquery/dist/jquery.js',
                 'bower_components/jquery-ui/jquery-ui.js',
@@ -267,20 +249,20 @@
         this.emit("end"); //End function
     };
     
-    gulp.task("error", function () {
-        return gulp.src("./")
-            .pipe(through.obj(function (file, enc, callback) {
-                this.emit("error", new Error("Something happend: Error message!"));
-                callback();
-            }))
-            .on("error", notify.onError({
-                message: 'Error: <%= error.message %>',
-                sound: false // deactivate sound?
-            }))
-            .on("error", function (err) {
-                console.log("Error:", err);
-            })
-    });
+    //gulp.task("error", function () {
+    //    return gulp.src("./")
+    //        .pipe(through.obj(function (file, enc, callback) {
+    //            this.emit("error", new Error("Something happend: Error message!"));
+    //            callback();
+    //        }))
+    //        .on("error", notify.onError({
+    //            message: 'Error: <%= error.message %>',
+    //            sound: false // deactivate sound?
+    //        }))
+    //        .on("error", function (err) {
+    //            console.log("Error:", err);
+    //        })
+    //});
     
     //////////////////////////////////////////////////////////////////////////////
     //
@@ -342,24 +324,13 @@
             .pipe(plugins.rimraf({ force: true }));
     });
 
-    // Delete everything in the build directory.
-    gulp.task('clean:dbuild', function (callback) {
-        del(['build/js', 'build/css', 'build/partials', 'build/font-awesome'], function (err, deletedFiles) {
-            console.log('Build files deleted:', deletedFiles.join(', '));
-        });
-    });
-
+    // Delete everything in the dist directory.
     gulp.task('clean:dist', function () {
         return gulp.src(['dist/*'], { read: false })
             .pipe(plugins.rimraf({ force: true }));
     });
 
-    // Delete everything in the dist directory.
-    gulp.task('clean:ddist', function (callback) {
-        del(['dist/*'], function (err, deletedFiles) {
-            console.log('Dist files deleted:', deletedFiles.join(', '));
-        });
-    });
+
 
     //////////////////////////////////////////////////////////////////////////////
     //
@@ -440,7 +411,7 @@
     // RUN: gulp create_allcss
     //
     // Identify the custom css files that have changed. C
-    gulp.task("dev:css", ["dev:css:lint"], function () {
+    gulp.task("dev:css", function () {
         return gulp.src(paths.dev_css)
             .pipe(plugins.changed('./'));
             //.pipe(plugins.notify({ message: "<%= file.relative %> changed!"}));
@@ -581,7 +552,7 @@
     // RUN: gulp dev:html
     //
     // Copy each custom html file to the build directory structure
-    gulp.task("dev:html", ['dev:html:lint'], function () {
+    gulp.task("dev:html", function () {
         return gulp.src(paths.dev_html)
             // Only get the files that changed since the last time it was run 
             .pipe(plugins.changed("./"))
@@ -629,7 +600,7 @@
     // RUN: gulp dev:js
     //
     // Identify the custom js files that have changed.
-    gulp.task("dev:js", ['dev:js:lint'], function () {
+    gulp.task("dev:js", function () {
         return gulp.src(paths.dev_js)
             .pipe(plugins.changed("./"));
             //.pipe(plugins.notify({ message: "<%= file.relative %> changed!"}));

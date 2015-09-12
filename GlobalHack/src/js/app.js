@@ -76,7 +76,7 @@ app.run(
             $rootScope.pageLoaded = true;
             
             //$rootScope.endPoint = "http://localhost:3000";
-            $rootScope.endPoint = "http://192.168.3.187:3000";
+            $rootScope.endPoint = "http://192.168.137.196:3000";
 
             $rootScope.clearmenuclass = true;
 
@@ -104,13 +104,13 @@ app.config( ['$urlRouterProvider', '$stateProvider',
     .state('home', {
         clearmenuclass: true,
         controller: 'homeController',
-        templateUrl: 'partials/home/home.html',
+        templateUrl: 'templates/home/home.html',
         url: '/home'
     })
 
     .state('about', {
         controller: 'aboutController',
-        templateUrl: 'partials/about/about.html',
+        templateUrl: 'templates/about/about.html',
         url: '/about'
     })
 
@@ -118,20 +118,20 @@ app.config( ['$urlRouterProvider', '$stateProvider',
     /* Register */
     .state('register', {
         controller: 'userController',
-        templateUrl: 'partials/account/register.html',
+        templateUrl: 'templates/account/register.html',
         url: "/register"
     })
 
    /* Login */
     .state('login', {
         controller: 'userController',
-        templateUrl: 'partials/account/login.html',
+        templateUrl: 'templates/account/login.html',
         url: "/login"
     })
 
    /* Logout */
     .state('logout', {
-        templateUrl: 'partials/account/logout.html',
+        templateUrl: 'templates/account/logout.html',
         url: "/logout"
     });
 
@@ -141,8 +141,8 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         ** The `when` method says if the url is ever the 1st param, then redirect to the 2nd param
         ** Here we are just setting up some convenience urls.
         */
-        .when('/c?id', '/partials/contacts/:id')
-        .when('/user/:id', '/partials/contacts/:id')
+        .when('/c?id', '/templates/contacts/:id')
+        .when('/user/:id', '/templates/contacts/:id')
 
         .otherwise('/home');
 
