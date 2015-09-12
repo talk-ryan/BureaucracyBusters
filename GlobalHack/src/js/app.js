@@ -108,113 +108,12 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         url: '/home'
     })
 
-    /* About maintz.com */    
     .state('about', {
         controller: 'aboutController',
         templateUrl: 'partials/about/about.html',
         url: '/about'
     })
 
-    /* About Website */
-    .state('website', {
-        templateUrl: 'partials/about/website.html',
-        url: "/website"
-    })
-    
-    /* Photo Carousel */
-    .state('photoCarousel', {
-        //controller: 'photosController',
-        templateUrl: 'partials/photos/test.carousel.html',
-        url: "/test.carousel"
-    })
-
-    /* Photo Gallery */
-    .state('photoGallery', {
-        //controller: 'photosController',
-        templateUrl: 'partials/photos/photo.gallery.html',
-        url: "/photo.gallery"
-    })
-
-    /* Photo Grid */
-    .state('photoGrid', {
-        /*
-        service: 'PhotoService',
-        resolve: {
-            photos: ['http', function ($http) {
-                return $http.get("json/photorecords.json").success(
-                    function(response) {
-                        $scope.photos = response.photo_records;
-                    }
-                );
-            }]
-        },
-        */
-        //controller: 'photosController',
-        templateUrl: 'partials/photos/photo.grid.html',
-        url: "/photo.grid"
-    })
-
-    /* Videos */
-    .state('videos', {
-        /*
-        service: 'VideosService',
-        resolve: {
-            videos: ['http', function ($http) {
-                return $http.get('json/videos.json').then(function(response){
-                    return response.data;
-                })
-            }]
-        },
-        */
-        controller: 'videosController',
-        templateUrl: 'partials/videos/videos.html',
-        url: "/videos"
-    })
-
-    /* Links */
-    .state('links', {
-        clearmenuclass: false,
-        controller: 'linksController',
-        templateUrl: 'partials/links/links.html',
-        url: "/links"
-    })
-
-    /* Portfolio */
-    .state('portfolio', {
-        controller: 'portfolioController',
-        templateUrl: 'partials/portfolio/portfolio.html',
-        url: "/portfolio"
-    })
-
-    /* Contact */
-    .state('contact', {
-        controller: 'contactController',
-        templateUrl: 'partials/contact/contact.html',
-        url: "/contact"
-    })
-
-    /* Contacts */
-    .state('contacts', {
-        /*
-        ** Showing off how you could return a promise from partialsProvider
-        templateProvider: [  '$timeout',
-            function (        $timeout) {
-                return $timeout(function () {
-                    return '<p class="lead">UI-Router Resources</p><ul>' +
-                        '<li><a href="https://github.com/angular-ui/ui-router/tree/master/sample">Source for this Sample</a></li>' +
-                        '<li><a href="https://github.com/angular-ui/ui-router">Github Main Page</a></li>' +
-                        '<li><a href="https://github.com/angular-ui/ui-router#quick-start">Quick Start</a></li>' +
-                        '<li><a href="https://github.com/angular-ui/ui-router/wiki">In-Depth Guide</a></li>' +
-                        '<li><a href="https://github.com/angular-ui/ui-router/wiki/Quick-Reference">API Reference</a></li>' +
-                        '</ul>';
-                }, 100);
-            }
-        ],
-        */
-        controller: 'contactsController',
-        templateUrl: 'partials/contacts.html',
-        url: '/contacts'
-    })
 
     /* Register */
     .state('register', {
@@ -245,10 +144,6 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         .when('/c?id', '/partials/contacts/:id')
         .when('/user/:id', '/partials/contacts/:id')
 
-        .when('/video/:videoName', '/partials/videos/:id')
-        /*
-        ** If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
-        */
         .otherwise('/home');
 
 
