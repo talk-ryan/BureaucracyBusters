@@ -1,0 +1,157 @@
+/*!***************************************************************************
+ *****************************************************************************
+ **
+ ** Filename    : sections.less
+ **
+ *****************************************************************************
+ ****************************************************************************/
+
+@import url("variables.less");
+@import url("mixins.less");
+
+section {
+    margin-top                  : 0;
+    top                         : 0;
+    .lgradient3(@cs1_bg1; @cs1_bg2; transparent;);        
+    
+    .section-heading {
+        .heading-font;
+        font-size                   : 40pt;
+        margin-top                  : 100px;
+        margin-bottom               : 15px;
+        text-shadow                 : 2px 3px 6px @cs1_text_muted;
+    }
+    
+    .section-subheading {
+        .subheading-font;
+        color                       : @cs1_text2;
+        font-size                   : 16pt;
+        margin-bottom               : 25px;
+        font-style                  : italic;
+        font-weight                 : 400;
+        text-transform              : none;        
+        text-shadow                 : 2px 2px 4px @cs1_text_muted;
+    }
+    
+    .filterResult {
+        font-family                 : monospace;
+        font-style                  : normal;
+        font-weight                 : normal;
+    }
+} // ALL Sections
+    
+@media( min-width: @size_md ) {
+	section {
+        .section-heading {
+        }
+        .section-subheading {
+        }
+	}
+} // ALL Sections
+
+@media( min-width: @size_sm ) {
+	section {
+		padding                 : 150px 0;
+        .section-heading {
+        }
+        .section-subheading {
+        }
+	}
+} // ALL Sections
+
+@media( min-width: @size_xs ) {
+    //margin-top                  : 0;
+	section {
+        .section-heading {
+        }
+        .section-subheading {
+        }
+	}
+} // ALL Sections
+
+.home-section {
+    top                         : 0;
+    margin-top                  : 100px;
+    color                       : @color8;
+    background-color            : transparent;
+
+    .intro-text {
+        text-align                  : center;
+        padding-top                 : 0;
+        padding-bottom              : 0;
+        .intro-lead-in {    
+            .serif-font;    
+            text-align                  : center;
+            font-style                  : italic;
+            line-height                 : 40px;
+            font-size                   : 40pt;
+            margin-bottom               : 5px;
+            text-shadow                 : 2px 3px 4px @color6;
+        }   
+        .intro-heading {    // Maintz.com image
+            margin-bottom       : 10px;
+            img {   
+                margin          : 0 auto 30px;
+            }
+        }
+    }
+} // Section HOME
+
+@media( min-width: @size_sm ) {
+    .home-section {
+        header {
+            .intro-text {
+                padding-top     : 80px;
+                padding-bottom  : 200px;
+                .intro-lead-in {
+                    font-size   : 20pt;
+                    line-height : 40px;
+                }
+            }
+        }
+    }
+} // Section HOME
+
+@media( min-width: @size_xs ) {
+    .home-section {
+        header {
+            .intro-text {
+                padding-top     : 90px;
+                padding-bottom  : 200px;
+                font-size       : 14pt;
+                .intro-lead-in {
+                    font-size   : 10pt;
+                    line-height : 50px;
+                }
+            }
+        }
+    }
+} // Section HOME
+
+.about-section {
+    .lgradient3(white; @color8; transparent;);        
+} // Section ABOUT
+
+.website-section {
+    .lgradient3(white; @color8; transparent;);        
+    img {
+        height                      : 60px;
+        width                       : auto;
+    }
+} // Section WEBSITE
+
+// TODO: Complete the Login/Account section
+.account-section {
+    background-color            : white;
+    color                       : @color2;
+    button,
+    .btn,
+    .btn-primary {
+        background-color        : @color2;
+        color                   : black;
+    }
+} // Section ACCOUNT
+
+/*****************************************************************************
+ ** END OF FILE - sections.less
+ ****************************************************************************/
