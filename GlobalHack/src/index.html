@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html>
 <head>
     <meta charset="utf-8">
     <title>Home</title>
@@ -12,20 +12,16 @@
     <!--[if lte IE 7]><link rel="stylesheet" href="css/style.ie7.css" media="screen" /><![endif]-->
     <link rel="stylesheet" type="text/css" href="css/style.responsive.css" media="all">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quattrocento+Sans&amp;subset=latin">
+    <!--
     <link rel="stylesheet" type="text/css" href="css/gh5.css" media="screen">
+-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.responsive.js"></script>
+    
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/script.responsive.js"></script>
-    <script src="js/gh5.js"
-
-    <style>.content .postcontent-0 .layout-item-0 { border-right-style:solid;border-bottom-style:solid;border-right-width:1px;border-bottom-width:1px;border-right-color:#CDC989;border-bottom-color:#CDC989; padding-right: 10px;padding-left: 10px;  }
-    .content .postcontent-0 .layout-item-1 { border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#CDC989; padding-right: 10px;padding-left: 10px;  }
-    .content .postcontent-0 .layout-item-2 { padding-right: 10px;padding-left: 10px;  }
-    .ie7 .post .layout-cell {border:none !important; padding:0 !important; }
-    .ie6 .post .layout-cell {border:none !important; padding:0 !important; }
-    </style>
 </head>
 <body ng-app="gh5">
 
@@ -36,7 +32,7 @@
 
         <!-- Display the partial view selected from the navigation menu -->
         <ui-view class="partialView"/>
-
+Something to display
         <!-- Display the fixed footer on the bottom of the page -->
         <div data-ng-include="'templates/_footer.html'"></div>
 
