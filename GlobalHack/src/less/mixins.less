@@ -1,0 +1,171 @@
+/*!***************************************************************************
+ *****************************************************************************
+ **
+ ** Filename    : mixins.less
+ **
+ *****************************************************************************
+ ****************************************************************************/
+
+@import url( 'variables.less' );
+
+// Define mixins
+//
+// Bootstrap Button Variant
+.button-variant(@color; @background; @border) {
+	color                       : @color;
+	background-color            : @background;
+	border-color                : @border;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		color                   : @color;
+		background-color        : darken(@background, 10%);
+        border-color            : darken(@border, 12%);
+	}
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		background-image        : none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color    : @background;
+			border-color        : @border;
+		}
+	}
+
+	.badge {
+		color                   : @background;
+		background-color        : @color;
+	}
+}
+
+// Define gradients
+// Eliminate having to duplicate these same 5 lines for every gradient
+.lgradient2(@firstColor; @secondColor) {
+    background                  : -webkit-linear-gradient(@firstColor, @secondColor); 
+    background                  :    -moz-linear-gradient(@firstColor, @secondColor); 
+    background                  :     -ms-linear-gradient(@firstColor, @secondColor); 
+    background                  :      -o-linear-gradient(@firstColor, @secondColor); 
+    background                  :         linear-gradient(@firstColor, @secondColor);
+}
+
+.lgradient3(@firstColor; @secondColor; @thirdColor) {
+    background                  : -webkit-linear-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :    -moz-linear-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :     -ms-linear-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :      -o-linear-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :         linear-gradient(@firstColor, @secondColor, @thirdColor);
+}
+
+.gradient2(@firstColor; @secondColor) {
+    background                  : -webkit-radial-gradient(@firstColor, @secondColor); 
+    background                  :    -moz-radial-gradient(@firstColor, @secondColor); 
+    background                  :     -ms-radial-gradient(@firstColor, @secondColor); 
+    background                  :      -o-radial-gradient(@firstColor, @secondColor); 
+    background                  :         radial-gradient(@firstColor, @secondColor);
+}
+
+.gradient3(@firstColor; @secondColor; @thirdColor) {
+    background                  : -webkit-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :    -moz-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :     -ms-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :      -o-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :         radial-gradient(@firstColor, @secondColor, @thirdColor);
+}
+
+.ogradient3(@firstColor; @secondColor; @thirdColor; @opacityLevel) {
+    @ieopacity                  : round(@opacityLevel * 100); // For IE8 and earlier.
+    background                  : -webkit-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :    -moz-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :     -ms-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :      -o-radial-gradient(@firstColor, @secondColor, @thirdColor); 
+    background                  :         radial-gradient(@firstColor, @secondColor, @thirdColor);
+    opacity                     : @opacityLevel; // The lower the value, the more transparent (0.0 - 1.0).
+    filter                      : alpha( opacity=@ieopacity ); // For IE8 and earlier. Values from 0 - 100
+}
+ 
+// Takes 3 arguments:
+// Text Color, Background Color, and Border Color
+.nav-gradient-pill(@textColor; @background1; @background2; @borderColor) {
+    .gradient2(@background1, @background2);
+	color                       : @textColor;
+    border                      : 2px solid @borderColor;
+    border-radius               : 10px;
+        -webkit-transition      : -webkit-radial-gradient .5s; /* Safari 3.1 to 6.0 */
+           -moz-transition      :    -moz-radial-gradient .5s;
+            -ms-transition      :     -ms-radial-gradient .5s; 
+             -o-transition      :      -o-radial-gradient .5s;
+                transition      :         radial-gradient .5s;
+                transition      : color 2s;
+                transition      : border-radius .5s;
+    
+}
+
+// Define Background Cover
+.background-cover() {
+    background-attachment       : fixed;
+    background-position         : 50 50;
+    min-height                  : 100%;
+    min-width                   : 100%;
+    -webkit-background-size     : cover;
+       -moz-background-size     : cover;
+         -o-background-size     : cover;
+            background-size     : cover;
+}
+
+// Define the various font selections
+.serif-font() {
+	font-family                 : "Droid Serif", 
+                                  "Helvetica Neue", 
+                                  "Helvetica", 
+                                  "Arial", 
+                                  "sans-serif";
+}
+
+.script-font() {
+	font-family                 : "Kaushan Script", 
+                                  "Helvetica Neue", 
+                                  "Helvetica", 
+                                  "Arial", 
+                                  "cursive";
+}
+
+.body-font() {
+	font-family                 : "Roboto Slab", 
+                                  "Helvetica Neue", 
+                                  "Helvetica", 
+                                  "Arial", 
+                                  "sans-serif";
+}
+
+.heading-font() {
+	font-family                 : "Montserrat",
+                                  "Helvetica Neue", 
+                                  "Helvetica", 
+                                  "Arial", 
+                                  "sans-serif";
+	text-transform              : uppercase;
+}
+
+.subheading-font() {
+    font-family                 : "Droid Serif", 
+                                  "Helvetica Neue", 
+                                  "Helvetica", 
+                                  "Arial", 
+                                  "sans-serif";
+
+}
+
+/*****************************************************************************
+ ** END OF FILE - mixins.less
+ ****************************************************************************/
