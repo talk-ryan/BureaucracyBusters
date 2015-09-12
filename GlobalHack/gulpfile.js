@@ -181,21 +181,21 @@
             images: [
                 'src/favicon.ico',
                 'src/apple-touch-icon.png',
-                '!src/img/**/Thumbs.db',
-                '!src/img/**/*.ini'
+                '!src/images/**/Thumbs.db',
+                '!src/images/**/*.ini'
             ],
             jpg: [
-                'src/img/**/*.jpg'
+                'src/images/**/*.jpg'
             ],
             gif: [
-                'src/img/**/*.gif'
+                'src/images/**/*.gif'
             ],
             png: [
-                'src/img/**/*.png'
+                'src/images/**/*.png'
             ],
             vid: [
-                'src/img/**/*.wmv',
-                'src/img/**/*.mov'
+                'src/images/**/*.wmv',
+                'src/images/**/*.mov'
             ],
             json: [
                 'src/json/**/*.json'
@@ -782,7 +782,7 @@
             //.pipe(plugins.notify({ message: "Optimizing <%= file.relative %>"}))
             .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
             .on("error", plugins.notify.onError({message: 'Error optimizing image : <%= error.message %>'}))
-            .pipe(gulp.dest("build/img/"));
+            .pipe(gulp.dest("build/images/"));
     });
 
     // RUN: gulp gifs
@@ -794,7 +794,7 @@
             .pipe(plugins.changed('./'))
             .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
             .on("error", plugins.notify.onError({message: 'Error optimizing image : <%= error.message %>'}))
-            .pipe(gulp.dest("build/img/"));
+            .pipe(gulp.dest("build/images/"));
     });
 
     // RUN: gulp pngs
@@ -806,7 +806,7 @@
             .pipe(plugins.changed('./'))
             .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
             .on("error", plugins.notify.onError({message: 'Error optimizing image : <%= error.message %>'}))
-            .pipe(gulp.dest("build/img/"));
+            .pipe(gulp.dest("build/images/"));
     });
 
     // RUN: gulp videos
@@ -815,7 +815,7 @@
     gulp.task("videos", function () {
         return gulp.src(paths.vid)
             .pipe(plugins.changed('./'))
-            .pipe(gulp.dest("build/img/"));
+            .pipe(gulp.dest("build/images/"));
     });
     
     // RUN: gulp images
@@ -826,7 +826,7 @@
             .pipe(plugins.changed("./"))
             .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
             .on("error", plugins.notify.onError({message: 'Error optimizing image : <%= error.message %>'}))
-            .pipe(gulp.dest("build/img/"));
+            .pipe(gulp.dest("build/images/"));
     });
 
     // RUN: gulp images:dist
@@ -834,12 +834,12 @@
     // Copy all static images to the build directory
     gulp.task("images:dist", ['images'], function () {
         return gulp.src([
-            'build/img/**/*',
+            'build/images/**/*',
             'build/favicon.ico',
             'build/apple-touch-icon.png'
         ])
             //.pipe(plugins.notify({ message: "Copying image <%= file.relative %> to dist directory"}))
-            .pipe(gulp.dest("dist/img/"))
+            .pipe(gulp.dest("dist/images/"))
             .pipe(browserSync.stream());
     });
 
