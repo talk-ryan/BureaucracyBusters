@@ -1496,3 +1496,93 @@ footer {
 	font-weight: 700;
 	margin-right: 5px;
 }
+
+h1, h2 {
+    font-family: Corbel, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+}
+
+@media (min-width: 1200px) {
+.col-lg-12 {
+    margin-top: 35px;
+}
+}
+
+.about-us {
+    background: darkcyan;
+    background-image: url(https://github.com/talk-ryan/BureaucracyBusters/blob/master/GlobalHack/src/images/background.jpg?raw=true);
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.about-us p {
+    color: #fff;
+}
+
+.skills .skill p {
+    color: #fff;
+}
+
+.about-us .big-intro {
+    color: lightgoldenrodyellow;
+    font-size: 52px;
+}
+
+.skills .skill h6 {
+    color: aquamarine;
+}
+
+.white-text {
+    line-height: 50px;
+}
+
+.navbar {
+    background: #2E93B2;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: lightgoldenrodyellow;
+}
+
+.navbar-inverse .navbar-nav>li {
+    margin-top: 30px;
+}
+
+#main-nav {
+    min-height: 95px;
+}
+
+.header {
+    min-height: 95px;
+}	
+
+.header {
+    border: 1px solid;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.navbar-toggle {
+    display: inline;
+}
+.navbar-inverse .navbar-nav>li>a {
+    display: none;
+}
+.navbar-brand img {
+    margin-top: -63px;
+}
+}
+
+@media (max-width: 480px) {
+.responsive-logo img {
+    width: auto;
+}
+}
