@@ -1601,3 +1601,7 @@ h1, h2 {
     padding-left: 12px !important;
 }
 }
+
+.navbar-inverse .navbar-nav>li {
+    margin-right: 25px !important;
+}
