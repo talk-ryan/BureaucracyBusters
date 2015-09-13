@@ -401,7 +401,7 @@ input:focus {
 
 .header {
 	background: rgba(0, 0, 0, 0.5);
-	min-height: 75px;
+	min-height: 70px;
 	position: relative;
 	overflow: hidden;
 	border: 1px solid #DBDBDB;
@@ -421,7 +421,7 @@ input:focus {
 	position: absolute;
 	width: 100%;
 	z-index: 1000;
-	min-height: 75px;
+	min-height: 78px;
 }
 #main-nav.fixed {
 	position: fixed !important;
@@ -430,7 +430,7 @@ input:focus {
 .navbar-inverse .navbar-nav>li {
 	display: inline;
 	margin-right: 20px;
-	margin-top: 20px;
+	margin-top: 18px !important;
 }
 .navbar-inverse .navbar-nav>li:last-child {
 	margin-right: 0 !important;
@@ -444,7 +444,7 @@ input:focus {
 	height: 76px;
 	position: relative;
 	line-height: 45px;
-	padding-top: 8px;
+	padding-top: 10px;
 }
 .navbar-brand img {
     max-height: 62px;
@@ -777,7 +777,7 @@ width: -webkit-calc(100% / 2);
 -----------------------------------------*/
 
 .about-us {
-	background: #272727;
+	background: #222222;
 	color: #FFF;
 	padding-bottom: 100px;
 }
@@ -1510,8 +1510,8 @@ h1, h2 {
 }
 
 .about-us {
-    background: darkcyan;
-    background-image: url(https://github.com/talk-ryan/BureaucracyBusters/blob/master/GlobalHack/src/images/background.jpg?raw=true);
+    background: #222222;
+    background-image: url(../images/background.jpg?raw=true);
     background-repeat: no-repeat;
     padding-top: 70px;
     padding-bottom: 100px;
@@ -1560,7 +1560,7 @@ h1, h2 {
 }
 
 .header {
-    min-height: 95px;
+    min-height: 78px;
 }	
 
 .header {
@@ -1605,4 +1605,5 @@ h1, h2 {
 .navbar-inverse .navbar-nav>li {
     margin-right: 25px !important;
 }
+
 

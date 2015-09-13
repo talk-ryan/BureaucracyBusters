@@ -352,24 +352,25 @@
                                             <td>citation number</td>
                                             <td>citation date</td>
                                             <td>citation date</td>
-                                            <td>court date</td>
                                             <td>court location</td>
                                             <td>court address</td>
+                                            <td>court date</td>
                                         </tr>
                                         <tr ng-repeat='citation in citations | filter: searchName | filter: fname | filter: lname '>
                                             <td>{{citation.first_name}}</td>
                                             <td>{{citation.last_name}}</td>
                                             <td>{{citation.citation_number}}</td>
                                             <td>{{citation.citation_date}}</td>
-                                            <td>{{citation.court_date}}</td>
                                             <td>{{citation.court_location}}</td>
                                             <td>{{citation.court_address}}</td>
+                                            <td>{{citation.court_date}}</td>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
             
             </div>
