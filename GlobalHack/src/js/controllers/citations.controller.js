@@ -43,6 +43,11 @@ appControllers.controller('citationsController', [
             }, 1000);
         }
         
+        $scope.fname = "";
+        $scope.lname = "";
+        $scope.bdate = "";
+
+
         
         //////////////////////////////////////////////////////////////////////
         // ui-bootstrap.grid configuration

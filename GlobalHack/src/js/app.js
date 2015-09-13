@@ -113,6 +113,18 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         url: '/citations'
     })
 
+    .state('citations2', {
+        //controller: 'citationsController',
+        templateUrl: 'templates/citations/citations2.html',
+        url: '/citations2'
+    })
+
+    .state('citations3', {
+        //controller: 'citationsController',
+        templateUrl: 'templates/citations/citations3.html',
+        url: '/citations3'
+    })
+
     .state('locations', {
         templateUrl: 'templates/locations/locations.html',
         url: '/locations'

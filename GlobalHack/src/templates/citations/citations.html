@@ -14,60 +14,25 @@
 <br/>
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="section-heading">Citation Information</h1><br/>
+            <h1 class="section-heading">Search for a Citation</h1><br/>
             <h3 class="section-subheading">Provide a list of the current citations.</h3><br/>
         </div>
     </div>
 
     <form method="post">
-        <div class="alert alert-info">
-                <div class="form-inline">
-                    <label class="control-label">
-                        <h1>What street have you lived on?</h1></label>
-                    <label class="radio">
-                        <input value="1" type="radio">Saint Louis County
-                    </label><br/>
-                    <label class="radio">
-                        <input value="2" type="radio">Saint Charles County
-                    </label><br/>
-                    <label class="radio">
-                        <input value="3" type="radio">Jefferson County
-                    </label>
-                </div>
-            </div>
+        <h3>What is your First Name?</h3>
+        <div class="col-lg-offset-1 col-lg-10 text-center">
+        <input class="form-control" ng-model="fname">
     ​
-            <div class="alert alert-info">
-                <div class="form-inline">
-                    <label class="control-label">
-                        <h1>What county have you lived in?</h1></label>
-                    <label class="radio">
-                        <input value="1" type="radio">Geiger Court
-                    </label><br/>
-                    <label class="radio">
-                        <input value="2" type="radio">Dalton Avenue
-                    </label><br/>
-                    <label class="radio">
-                        <input value="3" type="radio">Bluebird Terrace
-                    </label>
-                </div>
-            </div>
+        <h3>What is your Last Name?</h3>
+        <input class="form-control" ng-model="lname">
     ​
-            <div class="alert alert-info">
-                <div class="form">
-                    <label class="control-label">
-                        <h1>What is your height?</h1></label>
-                    <label class="radio">
-                        <input value="1" type="radio">5'9"
-                    </label><br/>
-                    <label class="radio">
-                        <input value="2" type="radio">5'11"
-                    </label><br/>
-                    <label class="radio">
-                        <input value="3" type="radio">6'2"
-                    </label>
-                </div>
-            </div>
-        </div>
-        <input class="btn btn-primary" type="submit" value="Submit" />
-    </form>
+        <h3>What is your Birthdate?</h3>
+        <input class="form-control" ng-model="bdate">
+    ​
+        <br/>
+        
+        <input class="btn btn-primary" onClick="parent.location='/src/#/citations2'" type="submit" value="Submit" />
+     </form>
+
 </section>
