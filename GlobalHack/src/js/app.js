@@ -140,6 +140,12 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         url: '/test3'
     })
 
+    .state('faq', {
+        controller: 'faqController',
+        templateUrl: 'templates/faq/faq.html',
+        url: '/faq'
+    })
+
 
     /* Register */
     .state('register', {
