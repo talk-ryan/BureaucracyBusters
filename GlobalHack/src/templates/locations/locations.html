@@ -1,26 +1,31 @@
-<section class="about-section">
+<section class="locations-section">
 <br/>
     <div class="row">
         <div class="col-lg-12 text-center">
             <h1 class="section-heading">Court Locations</h1><br/>
-            <h4 class="section-subheading">SUBHEADING - Description of what this page does.</h4><br/>
-            <h5 class="section-subheading text-muted">OPTIONAL - Additional detail about this page.</h5>
+            <h4 class="section-subheading">Enter your Personal Identifying Information</h4><br/>
+            <h5 class="section-subheading text-muted">And receive a list of current citations.</h5><br/>
         </div>
     </div>
 
-    <br/>
+<section class="citations-section" >
+<br/>
 
-    <div class="row">
-        <div class="col-lg-offset-1 col-lg-10 wow fadeInLeft animated">
-
-            <div class="well">
-            
-            MAIN CONTENT GOES HERE
-            
-            </div>
-        </div>
-    </div>
-
-    <br/><br/><br/><br/><br/>
+    <form method="post">
+        <h3>What is your First Name?</h3>
+        <div class="col-lg-offset-1 col-lg-10 text-center">
+        <input class="form-control" ng-model="fname">
+    ​
+        <h3>What is your Last Name?</h3>
+        <input class="form-control" ng-model="lname">
+    ​
+        <h3>What is your Birthdate?</h3>
+        <input class="form-control" ng-model="bdate">
+    ​
+        <br/>
+        
+        <input class="btn btn-primary" onClick="parent.location='/src/#/citations2'" type="submit" value="Submit" />
+     </form>
 
 </section>
+

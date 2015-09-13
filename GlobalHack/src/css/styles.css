@@ -1511,7 +1511,7 @@ h1, h2 {
 
 .about-us {
     background: darkcyan;
-    background-image: url(https://github.com/talk-ryan/BureaucracyBusters/blob/master/GlobalHack/src/images/background.jpg?raw=true);
+    background-image: url(images/background.jpg?raw=true);
     padding-top: 70px;
     padding-bottom: 100px;
 }
