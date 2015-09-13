@@ -1511,9 +1511,11 @@ h1, h2 {
 
 .about-us {
     background: darkcyan;
-    background-image: url(images/background.jpg?raw=true);
+    background-image: url(https://github.com/talk-ryan/BureaucracyBusters/blob/master/GlobalHack/src/images/background.jpg?raw=true);
+    background-repeat: no-repeat;
     padding-top: 70px;
     padding-bottom: 100px;
+    background-size: cover;
 }
 
 .about-us p {
@@ -1584,5 +1586,23 @@ h1, h2 {
 @media (max-width: 480px) {
 .responsive-logo img {
     width: auto;
+}
+
+.citations table tr td {
+    margin: 0 auto;
+    border: 1px dotted grey;
+    padding: 2px;
+    color: black;
+    
+}
+
+@media (min-width: 768px) {
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    padding-left: 12px !important;
+}
+}
+
+.navbar-inverse .navbar-nav>li {
+    margin-right: 25px !important;
 }
 
