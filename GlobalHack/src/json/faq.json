@@ -1,27 +1,37 @@
-[
+[  
     {
-        question:'Why am I being asked for more security questions when logging into my account?', answer:'These additional security questions will keep your account as secure as possible. We use these security questions as an extra layer of protection, helping to prevent unauthorized people from accessing your account.',
-        answer:'I dunno.'
-    },
+        question:’Court Dress Code’ , answer:’ You must wear shirts and shoes in the courtroom; no tank tops, offensive t-shirts, or hats are allowed.’} , 
     {
-        question:'Security and Weapons Screening:', 
-        answer:'Every person entering the courtroom will go through security and weapons screening.  All purses, briefcases, shopping bags and any carry-in items will be scanned utilizing an x-ray machine.  Individuals will be screened utilizing a walk-through and/or hand-held metal detector.'
-    },
+        question:’Security Process’, answer:’Why am I being asked for more security questions when logging into my account?  Additional security questions will keep your account secure. We use these security questions as an extra layer of protection, helping to prevent unauthorised people from accessing your account or information.’}, 
     {
-        question:'What is not permitted in the court room?', 
-        answer:'Firearms (not allowed in the Police/Court facility) Food or drink Other items that could pose a risk or threat to safety of others, or be disruptive'
-    },
+        question:’Security and Weapons Screening’ , answer:’ Every person who enters the courtroom will go through security and weapons screening. All purses, briefcases, and bags will be scanned with an x­-ray machine. You are not allowed to bring these items: camera, pocket knives, flashlights, scissors, aerosol, tools, clothing in bags, and weapons of any kind (including toy weapons). Cells phones must be TURNED OFF prior to entering the courtroom.}, 
     {
-        question:'Should I turn off my cell phone before entering court room?', 
-        answer:'Yes'
-    },
+        question:’Payment Plans’ , answer:’ Any individual is eligible for a monthly payment plan.  Payment plans should be set up within 10 days after the date of the court disposition. You will not receive an additional fine for setting up a payment plan.’}, 
     {
-        question:'What if I can not pay my installment agreement?', 
-        answer:'There may be a reinstatement fee if your agreement goes into default. Penalties and interest continue to accrue until your balance is paid in full. If you are in danger of defaulting on your payment agreement for any reason, contact us immediately. We will generally not take enforced collection actions.  You have several options available if your ability to pay has changed and you are unable to make payments on your installment agreement or your offer in compromise agreement. Call the hotline 800 number. Options could include reducing the monthly payment to reflect your current financial condition. You may be asked to provide proof of changes in your financial situation so have that information available when you call.'
-    },
+        question:’What if I can't pay my fines?’ , answer:’ If you are unable to pay your fines, you can complete approved community service hours at a government agency in exchange for your fines.’}, {question:’What if I need legal representation to help but can’t afford it?’ answer:’ Every person who appears in court has the right to an attorney.  If you cannot afford an attorney, one will be appointed to you.‘}, 
     {
-        question:'What if I need legal representation to help but can’t afford it?', 
-        answer:'Appointment of Public Defender Every person appearing in Court has the right to retain an attorney.  If an individual is facing a possible jail sentence and cannot afford an attorney, the Judge may appoint counsel to represent.  The application for appointment of counsel must be completed in its entirety and signed in the presence of a court clerk.  In addition, the documents listed on page 2 of the application must accompany the application.   The application may be downloaded for completion prior to submitting to the Court, but the signature must be witnessed by one of the clerks.'
-    }
+        question:’Plea of Guilty’, answer:’ By a plea of guilty (under most circumstances), you admit that you committed the act you were charged with, that the act is prohibited by law and that you have no legal defense. 1. By pleading guilty, you are waiving your right to remain silent. Without your plea of guilty, the City would have the burden of proving the case against you.}, 
+    {
+        question:’Plea of Not ­Guilty’, answer:’ A plea of not guilty means that you deny guilt and the City must prove its charges against you. Your case will be set for trial and will be tried on that same day or you will be given a date to appear. You will receive no other notice of your trial date. If you plead not guilty, you must decide whether to employ an attorney to represent you at trial. You may defend yourself but no one else except an attorney may represent you. At trial, the City must prove the charge against you as contained in the formal complaint "beyond a reasonable doubt" before a verdict of guilty can be reached. The Judge will announce the penalty if you are found guilty of the offense. You should be prepared to pay the fines and costs at that time or set up a payment plan.’}, 
+    {
+        question:’Fines’, answer:’  A fine is the amount of money the court has ordered to be paid as a penalty and may be ordered in a variety of civil cases including traffic citations, or drunk or disorderly citations.  Fines may include court costs or other fees.’} 
+    {
+        question:’Plea Options’ , answer:’ Plea of Guilty (defined above) Plea of not Guilty (defined above)’} 
+    {
+        question:’ I have an Outstanding Violation(s). What does that mean and what do I need to do? ‘, answer: ‘An outstanding violation is an unresolved citation that has been reported to the Failure to Appear/Failure to Pay program. If this citation has been resolved or has been reported in error; please contact the court from which the citation was issued. Only the jurisdiction that issued the citation has the authority to clear the citation.’} 
+    {
+        question:’Where do I obtain information about outstanding warrants?’ answer:’ If you have an outstanding warrant, our website will indicate that to you.’}, 
+    {
+        question:’What is a Failure to Appear?’, answer:’ When you sign a traffic ticket you are promising to appear (called an arraignment) on or before the date at the bottom of the ticket. If you violate your written promise to go to court by the due date, you may be guilty of a misdemeanor. Avoid additional fees and legal action, which may include a warrant for your arrest, by taking action before your due date.’}, 
+    {
+        question:’How Do I Request A Disability Accommodation?’, answer:’ It is the policy of the court to ensure that persons with disabilities have equal and full access to the judicial system. To request an accommodation, complete the Request for Accommodations By Persons With Disabilities. You should file this form with the court as far in advance as possible, but at least 5 days before the date that you need the accommodation.’}, 
+    {
+        question:’What If I Do Not Speak English Well?’, answer:’ The court provides interpreters upon request. When you request a court date, let the clerk know that you need an interpreter in the language you speak so that an interpreter can be ordered for your court date. On your court date, let the bailiff in the courtroom know that you require an interpreter so that an interpreter can be sent to your courtroom.’}, 
+    {
+        question:’Can I Bring Children To Court?’,answer:’ Children may be brought to the court and may stay in Children’s Area while their caregivers are conducting business with the court. Children’s Area is a safe drop ­in center for children that lets children be children instead of spending long sessions listening to adult interactions that could be painful or frightening. You can read more about which courts offer a Children’s Area and the guidelines.’}, 
+    {
+        question:’What If I Need to Postpone my Court Date?’, answer:’ If you would like to request a new court date, you can do so in person, by phone, or online.’},
+    {
+        question:’What If I Miss My Court Date?’, answer:’ If you miss your court date, you should contact the court as quickly as possible to find out the status of your case. You can also access your case online at online case access. The court can order a warrant for your arrest and you can be charged with a failure to appear.’} 
 ]
         

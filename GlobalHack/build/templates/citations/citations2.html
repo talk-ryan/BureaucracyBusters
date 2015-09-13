@@ -1,0 +1,385 @@
+<!--
+/**
+* @ngdoc overview
+* @name citations.html
+*
+* @description
+* AngularJS partials view - Citations screen.
+* Utilizes RWD CSS3 features and functionality.
+*
+*/
+-->
+
+<section class="citations-section" >
+<br/>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1 class="section-heading">Citation Information</h1><br/>
+            <h3 class="section-subheading">Provide a list of the current citations.</h3><br/>
+        </div>
+    </div>
+    <div ng-init="citations = [
+  {
+    'id':1,
+    'citation_number':789674515,
+    'citation_date':'3/9/2015 0:00',
+    'first_name':'Wanda',
+    'last_name':'Phillips',
+    'date_of_birth':'12/30/1975 0:00',
+    'defendant_address':'0 Erie Road',
+    'defendant_city':'DES PERES',
+    'defendant_state':'MO',
+    'drivers_license_number':'O890037612',
+    'court_date':'11/12/2015 0:00',
+    'court_location':'COUNTRY CLUB HILLS',
+    'court_address':'7422 Eunice Avenue'
+  },
+  {
+    'id':2,
+    'citation_number':513276502,
+    'citation_date':'3/15/2015 0:00',
+    'first_name':'Mildred',
+    'last_name':'Collins',
+    'date_of_birth':'10/31/1960 0:00',
+    'defendant_address':'856 Banding Trail',
+    'defendant_city':'CHESTERFIELD',
+    'defendant_state':'MO',
+    'drivers_license_number':null,
+    'court_date':'9/16/2015 0:00',
+    'court_location':'FLORISSANT',
+    'court_address':'315 Howdershell Road'
+  },
+  {
+    'id':3,
+    'citation_number':877826802,
+    'citation_date':'2/10/2015 0:00',
+    'first_name':'Lori',
+    'last_name':'Grant',
+    'date_of_birth':'4/10/1992 0:00',
+    'defendant_address':'62819 Jay Way',
+    'defendant_city':'HILLSDALE',
+    'defendant_state':'MO',
+    'drivers_license_number':'A840420280',
+    'court_date':'11/12/2015 0:00',
+    'court_location':'FENTON',
+    'court_address':'625 New Smizer Mill Road'
+  },
+  {
+    'id':4,
+    'citation_number':743778728,
+    'citation_date':'4/29/2015 0:00',
+    'first_name':'Lori',
+    'last_name':'Grant',
+    'date_of_birth':'4/10/1992 0:00',
+    'defendant_address':'62819 Jay Way',
+    'defendant_city':'HILLSDALE',
+    'defendant_state':'MO',
+    'drivers_license_number':'A840420280',
+    'court_date':'10/8/2015 0:00',
+    'court_location':'ST. LOUIS CITY',
+    'court_address':'8944 St. Charles Rock Road'
+  },
+  {
+    'id':5,
+    'citation_number':23314665,
+    'citation_date':'5/25/2015 0:00',
+    'first_name':'Lori',
+    'last_name':'Grant',
+    'date_of_birth':'4/10/1992 0:00',
+    'defendant_address':'62819 Jay Way',
+    'defendant_city':'HILLSDALE',
+    'defendant_state':'MO',
+    'drivers_license_number':'A840420280',
+    'court_date':'12/25/2015 0:00',
+    'court_location':'WEBSTER GROVES',
+    'court_address':'4 Lockwood Aveue'
+  },
+  {
+    'id':6,
+    'citation_number':111277359,
+    'citation_date':'1/15/2015 0:00',
+    'first_name':'Jerry',
+    'last_name':'Sanders',
+    'date_of_birth':'6/19/1973 0:00',
+    'defendant_address':'6 Kropf Park',
+    'defendant_city':'HAZELWOOD',
+    'defendant_state':'MO',
+    'drivers_license_number':'Z854997336',
+    'court_date':'12/29/2015 0:00',
+    'court_location':null,
+    'court_address':null
+  },
+  {
+    'id':7,
+    'citation_number':13938567,
+    'citation_date':'4/3/2015 0:00',
+    'first_name':'Lori',
+    'last_name':'Grant',
+    'date_of_birth':'4/10/1992 0:00',
+    'defendant_address':'62819 Jay Way',
+    'defendant_city':'HILLSDALE',
+    'defendant_state':null,
+    'drivers_license_number':'A840420280',
+    'court_date':'11/6/2015 0:00',
+    'court_location':'BERKELEY 1',
+    'court_address':'6120 Madison'
+  },
+  {
+    'id':8,
+    'citation_number':41970242,
+    'citation_date':'2/1/2015 0:00',
+    'first_name':'Phillip',
+    'last_name':'Gardner',
+    'date_of_birth':'5/29/1994 0:00',
+    'defendant_address':'115 Bobwhite Junction',
+    'defendant_city':'WARSON WOODS',
+    'defendant_state':'MO',
+    'drivers_license_number':'X984850978',
+    'court_date':'10/28/2015 0:00',
+    'court_location':'RIVERVIEW',
+    'court_address':'9699 Lilac Drive'
+  },
+  {
+    'id':9,
+    'citation_number':580837567,
+    'citation_date':'5/4/2015 0:00',
+    'first_name':'Judy',
+    'last_name':'Gardner',
+    'date_of_birth':'7/10/1963 0:00',
+    'defendant_address':'8 Utah Way',
+    'defendant_city':'CRYSTAL LAKE PARK',
+    'defendant_state':null,
+    'drivers_license_number':'Y799252548',
+    'court_date':'11/29/2015 0:00',
+    'court_location':'WARSON WOODS',
+    'court_address':'10015 Manchester Road'
+  },
+  {
+    'id':10,
+    'citation_number':874536433,
+    'citation_date':'5/5/2015 0:00',
+    'first_name':'Marilyn',
+    'last_name':'Arnold',
+    'date_of_birth':'1/6/1958 0:00',
+    'defendant_address':'835 Grayhawk Way',
+    'defendant_city':'SUNSET HILLS',
+    'defendant_state':null,
+    'drivers_license_number':'W879351691',
+    'court_date':'10/21/2015 0:00',
+    'court_location':'RICHMOND HEIGHTS',
+    'court_address':'7447 Dale Avenue'
+  },
+  {
+    'id':11,
+    'citation_number':466670789,
+    'citation_date':'6/30/2015 0:00',
+    'first_name':'Frank',
+    'last_name':'Fields',
+    'date_of_birth':'1/2/1992 0:00',
+    'defendant_address':'80611 Bluejay Pass',
+    'defendant_city':'DELLWOOD',
+    'defendant_state':'MO',
+    'drivers_license_number':'A073019557',
+    'court_date':'11/12/2015 0:00',
+    'court_location':'CHESTERFIELD',
+    'court_address':'690 Chesterfield Parkway West'
+  },
+  {
+    'id':12,
+    'citation_number':550159937,
+    'citation_date':'3/2/2015 0:00',
+    'first_name':'Nancy',
+    'last_name':'Kelley',
+    'date_of_birth':'8/27/1960 0:00',
+    'defendant_address':'0876 Barnett Circle',
+    'defendant_city':'BLACK JACK',
+    'defendant_state':'MO',
+    'drivers_license_number':'I927843860',
+    'court_date':'11/5/2015 0:00',
+    'court_location':'ROCK HILL',
+    'court_address':'320 West Thornton Avenue'
+  },
+  {
+    'id':13,
+    'citation_number':536940520,
+    'citation_date':'5/16/2015 0:00',
+    'first_name':'Samuel',
+    'last_name':'Ward',
+    'date_of_birth':'4/7/1962 0:00',
+    'defendant_address':'22 Waubesa Alley',
+    'defendant_city':'VALLEY PARK',
+    'defendant_state':'MO',
+    'drivers_license_number':'F307994218',
+    'court_date':'10/4/2015 0:00',
+    'court_location':'ST. LOUIS CITY',
+    'court_address':'12355 Natural Bridge Road'
+  },
+  {
+    'id':14,
+    'citation_number':305205919,
+    'citation_date':'7/28/2015 0:00',
+    'first_name':'Gloria',
+    'last_name':'Reynolds',
+    'date_of_birth':'12/25/1987 0:00',
+    'defendant_address':'85 Pepper Wood Circle',
+    'defendant_city':'WOODSON TERRACE',
+    'defendant_state':'MO',
+    'drivers_license_number':'J771765099',
+    'court_date':'11/4/2015 0:00',
+    'court_location':'DES PERES',
+    'court_address':'12325 Manchester Road'
+  },
+  {
+    'id':15,
+    'citation_number':876198308,
+    'citation_date':'5/27/2015 0:00',
+    'first_name':'Phyllis',
+    'last_name':'Nelson',
+    'date_of_birth':'12/28/1952 0:00',
+    'defendant_address':'6083 Tennessee Park',
+    'defendant_city':'CLAYTON',
+    'defendant_state':'MO',
+    'drivers_license_number':'P170421367',
+    'court_date':'12/28/2015 0:00',
+    'court_location':'HANLEY HILLS',
+    'court_address':'7713 Utica Drive'
+  },
+  {
+    'id':16,
+    'citation_number':239945809,
+    'citation_date':'4/11/2015 0:00',
+    'first_name':'Douglas',
+    'last_name':'Matthews',
+    'date_of_birth':'10/9/1983 0:00',
+    'defendant_address':'0277 High Crossing Crossing',
+    'defendant_city':'PAGEDALE',
+    'defendant_state':'MO',
+    'drivers_license_number':'K762580477',
+    'court_date':'9/25/2015 0:00',
+    'court_location':'UNINCORPORATED SOUTH ST. LOUIS COUNTY',
+    'court_address':'4544 Lemay Ferry Road'
+  },
+  {
+    'id':17,
+    'citation_number':66706304,
+    'citation_date':'3/12/2015 0:00',
+    'first_name':'Annie',
+    'last_name':'Nichols',
+    'date_of_birth':'10/20/1984 0:00',
+    'defendant_address':'3949 Hooker Drive',
+    'defendant_city':'BALLWIN',
+    'defendant_state':'MO',
+    'drivers_license_number':'S607522726',
+    'court_date':'12/3/2015 0:00',
+    'court_location':'ROCK HILL',
+    'court_address':'320 West Thornton Avenue'
+  },
+  {
+    'id':18,
+    'citation_number':598273736,
+    'citation_date':'2/27/2015 0:00',
+    'first_name':'Donald',
+    'last_name':'Webb',
+    'date_of_birth':'3/8/1967 0:00',
+    'defendant_address':'0 Summerview Terrace',
+    'defendant_city':'PASADENA HILLS',
+    'defendant_state':'MO',
+    'drivers_license_number':'I369319612',
+    'court_date':'12/25/2015 0:00',
+    'court_location':'BERKELEY 1',
+    'court_address':'6120 Madison'
+  },
+  {
+    'id':19,
+    'citation_number':873380316,
+    'citation_date':'4/5/2015 0:00',
+    'first_name':'Donald',
+    'last_name':'Hunter',
+    'date_of_birth':'6/13/1993 0:00',
+    'defendant_address':'6 Loomis Plaza',
+    'defendant_city':'TWIN OAKS',
+    'defendant_state':null,
+    'drivers_license_number':'N193286121',
+    'court_date':null,
+    'court_location':'PAGEDALE',
+    'court_address':'1420 Ferguson Avenue'
+  },
+  {
+    'id':20,
+    'citation_number':475261391,
+    'citation_date':'5/24/2015 0:00',
+    'first_name':'Roy',
+    'last_name':'Parker',
+    'date_of_birth':'8/20/1979 0:00',
+    'defendant_address':'2 Scoville Way',
+    'defendant_city':'GLEN ECHO PARK',
+    'defendant_state':'MO',
+    'drivers_license_number':'Y165779775',
+    'court_date':'11/6/2015 0:00',
+    'court_location':'OLIVETTE',
+    'court_address':'9473 Olive Boulevard'
+  }
+]"
+    <br/>
+
+    <div class='text-center'>
+
+        <label class='primary'>Citation ID Search:</label>
+        <input type='text' ng-model='searchName'  size='30'
+            placeholder='enter custom search criteria here'>
+
+        <br/>
+
+        <label class='filterResults'>Result of custom search : 
+            {{(citations | filter: searchName ).length}} 
+            out of {{(citations).length}} citations.
+        </label>        
+    </div>
+
+    <div class='container'>
+        
+        <div class='row'>
+            <div class='col-lg-offset-1 col-lg-10 text-center'>
+
+                <div class='citations' 
+
+                    <strong>{{ citations.length }} citations</strong>
+                    <br/>
+                    <table>
+                        <tr>
+                            <td>id<td>
+                            <td>citation_number</td>
+                            <td>citation_date</td>
+                            <td>first_name</td>
+                            <td>last_name</td>
+                            <td>date_of_birth</td>
+                            <td>defendant_address</td>
+                            <td>defendant_city</td>
+                            <td>defendant_state</td>
+                            <td>drivers_license_number</td>
+                            <td>court_date</td>
+                            <td>court_location</td>
+                            <td>court_address</td>
+                        </tr>
+                        <tr ng-repeat='citation in citations | filter: searchName '>
+                            <td>{{id}}<td>
+                            <td>{{citation_number}}</td>
+                            <td>{{citation_date}}</td>
+                            <td>{{first_name}}</td>
+                            <td>{{last_name}}</td>
+                            <td>{{date_of_birth}}</td>
+                            <td>{{defendant_address}}</td>
+                            <td>{{defendant_city}}</td>
+                            <td>{{defendant_state}}</td>
+                            <td>{{drivers_license_number}}</td>
+                            <td>{{court_date}}</td>
+                            <td>{{court_location}}</td>
+                            <td>{{court_address}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
