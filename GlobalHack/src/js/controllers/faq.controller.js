@@ -9,15 +9,15 @@
 "use strict";
 
 appControllers.controller('faqController', [
-            '$scope', '$rootScope', '$http', '$interval', '$animate', 
-    function($scope,   $rootScope,   $http,   $interval,   $animate  ){
+            '$scope', '$rootScope', '$http',  
+    function($scope,   $rootScope,   $http    ){
 
         debug=true;
         
         if(debug){
             console.log("appControllers('faqController') activated");
         }    
-
+/*
         $rootScope.clearmenuclass = false;
 
         //////////////////////////////////////////////////////////////////////
@@ -25,6 +25,7 @@ appControllers.controller('faqController', [
         //////////////////////////////////////////////////////////////////////
         
         var path = $rootScope.endPoint + '/json/faq.json';
+        
         console.log(path);
         
         $http.get(path)
@@ -42,6 +43,7 @@ appControllers.controller('faqController', [
                 console.log(Date());
             }, 1000);
         }
+*/
     }
 ]);
 

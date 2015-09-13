@@ -13,29 +13,25 @@ var debug = true;
 // Main configuration file. Sets up AngularJS module and routes and any other config objects
 // Configuration with ui-router instead of ng-route.
 var app = angular.module('app', [
-    'ngAnimate',
+    //'ngAnimate',
     'ngResource',
-    
-    //'ngTouch',
-    
     'ui',
     //'ui.bootstrap',
     //'ui.bootstrap.carousel',
     //'ui.calendar',
-    /*
-    'ui.grid',
-    'ui.grid.cellNav',
-    'ui.grid.edit',
-    'ui.grid.resizeColumns',
-    'ui.grid.pinning',
-    'ui.grid.selection',
-    'ui.grid.moveColumns',
-    'ui.grid.exporter',
-    'ui.grid.importer',
-    'ui.grid.grouping',
-    */
+    //'ui.grid',
+    //'ui.grid.cellNav',
+    //'ui.grid.edit',
+    //'ui.grid.resizeColumns',
+    //'ui.grid.pinning',
+    //'ui.grid.selection',
+    //'ui.grid.moveColumns',
+    //'ui.grid.exporter',
+    //'ui.grid.importer',
+    //'ui.grid.grouping',
     'ui.router',
     'ui.sortable',
+    //'ngTouch',
     'app.controllers',
     'app.filters',
     'app.directives',
@@ -65,28 +61,28 @@ if(debug){
     console.log("angular.module('app.services', ['ngResource']) defined");
 }
 
-//app.run(
-//    [            '$rootScope', '$state', '$stateParams',
-//        function ($rootScope,   $state,   $stateParams) {
-//            /* It's very handy to add references to $state and $stateParams to the $rootScope
-//            ** so that you can access them from any scope within your applications.
-//            ** For example, <li ng-class="{ active: $state.includes('contacts.list') }"> will
-//            ** set the <li> to active whenever 'contacts.list' or one of its decendents is active.
-//            */
-//            
-//            $rootScope.state = $state;
-//            $rootScope.stateParams = $stateParams;
-//
-//            $rootScope.pageLoaded = true;
-//            
-//            //$rootScope.endPoint = "http://localhost:3000";
-//            $rootScope.endPoint = "http://localhost:3000";
-//
-//            $rootScope.clearmenuclass = true;
-//
-//        }
-//    ]
-//);
+app.run(
+    [            '$rootScope', '$state', '$stateParams',
+        function ($rootScope,   $state,   $stateParams) {
+            /* It's very handy to add references to $state and $stateParams to the $rootScope
+            ** so that you can access them from any scope within your applications.
+            ** For example, <li ng-class="{ active: $state.includes('contacts.list') }"> will
+            ** set the <li> to active whenever 'contacts.list' or one of its decendents is active.
+            */
+            
+            $rootScope.state = $state;
+            $rootScope.stateParams = $stateParams;
+
+            $rootScope.pageLoaded = true;
+            
+            //$rootScope.endPoint = "http://localhost:3000";
+            $rootScope.endPoint = "http://localhost:3000";
+
+            $rootScope.clearmenuclass = true;
+
+        }
+    ]
+);
 
 app.config( ['$urlRouterProvider', '$stateProvider',
     function ($urlRouterProvider,   $stateProvider) {
@@ -111,52 +107,51 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         url: '/home'
     })
 
-    .state('about', {
-        templateUrl: 'templates/about/about.html',
-        url: '/about'
-    })
-
     .state('citations', {
-        controller: 'citationsController',
+        //controller: 'citationsController',
         templateUrl: 'templates/citations/citations.html',
         url: '/citations'
     })
 
-    .state('test1', {
-        controller: 'test1Controller',
-        templateUrl: 'templates/test/test1.html',
-        url: '/test1'
+    .state('locations', {
+        templateUrl: 'templates/locations/locations.html',
+        url: '/locations'
     })
 
-    .state('test2', {
-        controller: 'test2Controller',
-        templateUrl: 'templates/test/test2.html',
-        url: '/test2'
+    .state('payments', {
+        //controller: 'test1Controller',
+        templateUrl: 'templates/payments/payments.html',
+        url: '/payments'
     })
 
-    .state('test3', {
-        controller: 'test3Controller',
-        templateUrl: 'templates/test/test3.html',
-        url: '/test3'
+    .state('services', {
+        //controller: 'test2Controller',
+        templateUrl: 'templates/services/services.html',
+        url: '/services'
+    })
+
+    .state('rights', {
+        //controller: 'test3Controller',
+        templateUrl: 'templates/rights/rights.html',
+        url: '/rights'
     })
 
     .state('faq', {
-        controller: 'faqController',
+        //controller: 'faqController',
         templateUrl: 'templates/faq/faq.html',
         url: '/faq'
     })
 
-
     /* Register */
     .state('register', {
-        controller: 'userController',
+        controller: 'usersController',
         templateUrl: 'templates/account/register.html',
         url: "/register"
     })
 
    /* Login */
     .state('login', {
-        controller: 'userController',
+        controller: 'usersController',
         templateUrl: 'templates/account/login.html',
         url: "/login"
     })
