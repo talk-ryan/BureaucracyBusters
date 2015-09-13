@@ -1029,6 +1029,7 @@ width: -webkit-calc(100% / 2);
 	margin-top: 25px;
 	margin-bottom: 50px;
 	padding-bottom: 15px;
+	min-height: 499px;
 }
 .package-header {
 	height: 57px;
