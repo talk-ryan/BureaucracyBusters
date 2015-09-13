@@ -1,4 +1,54 @@
-<h1> Register Placeholder Text </h1>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sollicitudin auctor massa accumsan tristique. Mauris elit neque, vestibulum nec tellus nec, accumsan ornare dui. Nunc ut tortor ullamcorper, iaculis risus sed, pharetra eros. In sodales mauris ac ipsum scelerisque, eget faucibus enim feugiat. Vivamus ac libero erat. Donec sed sapien vel dolor maximus suscipit. Curabitur a ornare nisl. Suspendisse potenti. Aliquam id commodo leo. Sed aliquet arcu lorem, condimentum mattis massa lobortis id. 
+<!-- Register Section -->
+<section class="account-section">
+<br/>    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Register</h2><br/>
+                <h3 class="section-subheading text-primary">So That You Can Login To This Website.</h3><br/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Register</h4>
+                
+                
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</section>
 
-Nullam laoreet vitae tortor vel fringilla. Nam cursus nunc viverra sapien cursus, ut tristique elit maximus. Sed laoreet ex orci, sed tempus tellus euismod nec. Etiam rutrum nisl sed ipsum mattis, eu volutpat augue pharetra. Duis eu ex eu diam dictum placerat ac sit amet sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi vel ligula varius, commodo risus in, molestie orci. Praesent eu justo interdum metus vehicula semper vel sed diam. Nam non erat sit amet orci feugiat consectetur. 
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>
+    <form name="form" ng-submit="vm.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+            <label for="username">First name</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <label for="username">Last name</label>
+            <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
+            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a href="#/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
