@@ -21,7 +21,7 @@ appControllers.controller('homeController', [
         // Temporary values 
         // TODO: replace these with real login values;
         $scope.loggedIn = true;
-        $scope.userName = "bill@maintz.com"
+        $scope.userName = "bill@maintz.com";
     }
 ]);
 

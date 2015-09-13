@@ -11,15 +11,13 @@
 
 section {
     margin-top                  : 0;
-    top                         : 0;
-    .lgradient3(@cs1_bg1; @cs1_bg2; transparent;);        
-    
+    top                         : 50px;
     .section-heading {
         .heading-font;
         font-size                   : 40pt;
         margin-top                  : 100px;
         margin-bottom               : 15px;
-        text-shadow                 : 2px 3px 6px @cs1_text_muted;
+        text-shadow                 : 2px 3px 6px @cs1_text1;
     }
     
     .section-subheading {
@@ -70,11 +68,6 @@ section {
 } // ALL Sections
 
 .home-section {
-    top                         : 0;
-    margin-top                  : 100px;
-    color                       : @color8;
-    background-color            : transparent;
-
     .intro-text {
         text-align                  : center;
         padding-top                 : 0;
@@ -86,9 +79,9 @@ section {
             line-height                 : 40px;
             font-size                   : 40pt;
             margin-bottom               : 5px;
-            text-shadow                 : 2px 3px 4px @color6;
+            text-shadow                 : 2px 3px 4px @cs1_text4;
         }   
-        .intro-heading {    // Maintz.com image
+        .intro-heading {
             margin-bottom       : 10px;
             img {   
                 margin          : 0 auto 30px;
@@ -142,13 +135,13 @@ section {
 
 // TODO: Complete the Login/Account section
 .account-section {
-    background-color            : white;
-    color                       : @color2;
+    background-color            : @cs1_bg1;
+    color                       : @cs1_text1;
     button,
     .btn,
     .btn-primary {
-        background-color        : @color2;
-        color                   : black;
+        background-color        : @cs1_bg2;
+        color                   : @cs1_text2;
     }
 } // Section ACCOUNT
 

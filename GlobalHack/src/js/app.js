@@ -15,11 +15,14 @@ var debug = true;
 var app = angular.module('app', [
     'ngAnimate',
     'ngResource',
-    'ngTouch',
+    
+    //'ngTouch',
+    
     'ui',
-    'ui.bootstrap',
-    'ui.bootstrap.carousel',
-    'ui.calendar',
+    //'ui.bootstrap',
+    //'ui.bootstrap.carousel',
+    //'ui.calendar',
+    /*
     'ui.grid',
     'ui.grid.cellNav',
     'ui.grid.edit',
@@ -30,6 +33,7 @@ var app = angular.module('app', [
     'ui.grid.exporter',
     'ui.grid.importer',
     'ui.grid.grouping',
+    */
     'ui.router',
     'ui.sortable',
     'app.controllers',
@@ -103,37 +107,35 @@ app.config( ['$urlRouterProvider', '$stateProvider',
     /* Home */
     .state('home', {
         clearmenuclass: true,
-        controller: 'homeController',
         templateUrl: 'templates/home/home.html',
         url: '/home'
     })
 
     .state('about', {
-        controller: 'aboutController',
         templateUrl: 'templates/about/about.html',
         url: '/about'
     })
 
     .state('citations', {
-        //controller: 'citationsController',
+        controller: 'citationsController',
         templateUrl: 'templates/citations/citations.html',
         url: '/citations'
     })
 
     .state('test1', {
-        //controller: 'test1Controller',
+        controller: 'test1Controller',
         templateUrl: 'templates/test/test1.html',
         url: '/test1'
     })
 
     .state('test2', {
-        //controller: 'test2Controller',
+        controller: 'test2Controller',
         templateUrl: 'templates/test/test2.html',
         url: '/test2'
     })
 
     .state('test3', {
-        //controller: 'test3Controller',
+        controller: 'test3Controller',
         templateUrl: 'templates/test/test3.html',
         url: '/test3'
     })
