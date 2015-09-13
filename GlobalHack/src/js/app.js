@@ -130,6 +130,11 @@ app.config( ['$urlRouterProvider', '$stateProvider',
         url: '/locations'
     })
 
+    .state('locations2', {
+        templateUrl: 'templates/locations/locations2.html',
+        url: '/locations2'
+    })
+
     .state('payments', {
         //controller: 'test1Controller',
         templateUrl: 'templates/payments/payments.html',
